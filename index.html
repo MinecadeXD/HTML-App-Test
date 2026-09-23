@@ -25,11 +25,13 @@ section{padding:95px 0}.section-label{color:#00bfa5;font-size:13px;font-weight:8
 .card h3{font-size:23px;margin-bottom:8px}.card p{color:#9292a4;font-size:14px;min-height:92px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}.tag{font-size:11px;color:#bdbdcc;background:#191923;border:1px solid #292936;padding:5px 9px;border-radius:999px}
 .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:start}.about-text p{color:#9999aa;margin-bottom:17px}.info-card{background:#111119;border:1px solid #242431;border-radius:20px;padding:24px}.info-row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid #22222d;font-size:14px}.info-row:last-child{border-bottom:0}.info-row span:first-child{color:#777789}.info-row span:last-child{color:#ddd}
 .skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:10px 14px;border-radius:11px;background:#111119;border:1px solid #292936;color:#d5d5df;font-size:13px}
+.socials{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.social-card{display:flex;align-items:center;gap:14px;background:#111119;border:1px solid #292936;border-radius:16px;padding:17px;transition:.25s}.social-card:hover{border-color:#24665e;transform:translateY(-3px);background:#13131c}.social-icon{width:42px;height:42px;flex:0 0 42px;border-radius:12px;display:grid;place-items:center;background:#102c28;border:1px solid #165249;color:#5ee8d2}.social-icon svg{width:21px;height:21px;fill:currentColor}.social-name{font-size:14px;font-weight:750}.social-handle{font-size:12px;color:#777789;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .contact{background:#111119;border:1px solid #292936;border-radius:24px;padding:45px;text-align:center}.contact p{color:#9696a8;max-width:570px;margin:0 auto 25px}.contact-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 footer{border-top:1px solid #1c1c26;padding:25px 0;color:#676777;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px}
 @media(max-width:900px){
  .container{width:min(100% - 32px,1080px)}
  .projects{grid-template-columns:repeat(2,1fr)}
+ .socials{grid-template-columns:repeat(2,1fr)}
  .about-grid{grid-template-columns:1fr;gap:28px}
 }
 @media(max-width:720px){
@@ -38,7 +40,7 @@ footer{border-top:1px solid #1c1c26;padding:25px 0;color:#676777;font-size:12px}
  h1{font-size:clamp(46px,13vw,72px);letter-spacing:-2.5px}
  .hero{min-height:auto;padding:130px 0 85px}
  section{padding:72px 0}
- .projects{grid-template-columns:1fr}
+ .projects,.socials{grid-template-columns:1fr}
  .card{padding:21px}
  .card p{min-height:auto}
  .project-top{margin-bottom:19px}
@@ -61,7 +63,7 @@ footer{border-top:1px solid #1c1c26;padding:25px 0;color:#676777;font-size:12px}
 </style>
 </head>
 <body>
-<nav><div class="container nav-inner"><a class="logo" href="#home">Mine<span>cade</span></a><div class="nav-links"><a href="#projects">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+<nav><div class="container nav-inner"><a class="logo" href="#home">Mine<span>cade</span></a><div class="nav-links"><a href="#projects">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#socials">Socials</a><a href="#contact">Contact</a></div></div></nav>
 <main>
 <section class="hero" id="home"><div class="glow"></div><div class="container hero-content"><div class="eyebrow"><span class="dot"></span> Building & learning</div><h1>Hi, I'm <span class="gradient">Minecade.</span></h1><p>I build useful apps, experiment with web and Android development, and turn ideas into working projects.</p><div class="actions"><a class="btn btn-primary" href="#projects">View Projects ↓</a><a class="btn btn-secondary" href="https://github.com/MinecadeXD" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
 <section id="projects"><div class="container"><div class="section-label">What I've built</div><h2>Projects</h2><p class="section-intro">A selection of projects I'm building and experimenting with. More coming soon.</p><div class="projects">
@@ -71,6 +73,12 @@ footer{border-top:1px solid #1c1c26;padding:25px 0;color:#676777;font-size:12px}
 </div></div></section>
 <section id="about"><div class="container"><div class="section-label">A little about me</div><h2>Building by creating.</h2><div class="about-grid"><div class="about-text"><p>I'm Minecade, a developer and creator from India who enjoys turning ideas into practical projects.</p><p>I like experimenting with web technologies, Android apps, UI design, and tools that solve problems I actually have.</p><p>I'm still learning, so this portfolio is also a record of the things I'm building along the way.</p></div><div class="info-card"><div class="info-row"><span>Focus</span><span>Apps & Web</span></div><div class="info-row"><span>Based in</span><span>India</span></div><div class="info-row"><span>GitHub</span><span>@MinecadeXD</span></div><div class="info-row"><span>Currently</span><span>Building</span></div></div></div></div></section>
 <section id="skills"><div class="container"><div class="section-label">Tools I use</div><h2>Skills & technologies</h2><p class="section-intro">Technologies I'm working with while building my projects.</p><div class="skills"><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">Git & GitHub</span><span class="skill">Android</span><span class="skill">Capacitor</span><span class="skill">Termux</span><span class="skill">UI Design</span></div></div></section>
+<section id="socials"><div class="container"><div class="section-label">Find me online</div><h2>Socials</h2><p class="section-intro">You can find me and my work across these platforms.</p><div class="socials">
+<a class="social-card" href="https://youtube.com/@itz_minecade" target="_blank" rel="noopener" aria-label="YouTube — @itz_minecade"><span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.9V8.1l6.5 3.9-6.5 3.9z"/></svg></span><span><div class="social-name">YouTube</div><div class="social-handle">@itz_minecade</div></span></a>
+<a class="social-card" href="https://www.instagram.com/simply.harshxd" target="_blank" rel="noopener" aria-label="Instagram — @simply.harshxd"><span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.5 6.2a1.2 1.2 0 1 1-1.2 1.2 1.2 1.2 0 0 1 1.2-1.2z"/></svg></span><span><div class="social-name">Instagram</div><div class="social-handle">@simply.harshxd</div></span></a>
+<a class="social-card" href="https://x.com/Itz_Minecade" target="_blank" rel="noopener" aria-label="X — @Itz_Minecade"><span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.2l-4.9-6.3L6.6 22H3.5l7.2-8.2L2.8 2H9l4.4 5.8L18.9 2zm-1.1 17.8h1.7L8.2 4.1H6.4l11.4 15.7z"/></svg></span><span><div class="social-name">X / Twitter</div><div class="social-handle">@Itz_Minecade</div></span></a>
+<a class="social-card" href="https://discordapp.com/users/1207311483986255922" target="_blank" rel="noopener" aria-label="Discord — itz_minecade"><span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 4.1A16.4 16.4 0 0 0 15.4 2l-.5 1a15 15 0 0 0-5.8 0l-.5-1a16.4 16.4 0 0 0-4.1 2C1.9 7.2 1.2 11.9 1.5 16.5a16.5 16.5 0 0 0 5 2.5l1.2-1.7a10 10 0 0 1-1.8-.9l.4-.3a11.8 11.8 0 0 0 11.4 0l.4.3a10 10 0 0 1-1.8.9l1.2 1.7a16.5 16.5 0 0 0 5-2.5c.4-5.3-.9-10-3-12.4zM8.5 14.4c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 1 2 2.2-.9 2.2-2 2.2zm7 0c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 1 2 2.2-.9 2.2-2 2.2z"/></svg></span><span><div class="social-name">Discord</div><div class="social-handle">itz_minecade</div></span></a>
+</div></div></section>
 <section id="contact"><div class="container"><div class="contact"><div class="section-label">Let's connect</div><h2>Have an idea?</h2><p>Check out my GitHub to see what I'm building, or come back later to see what I've made next.</p><div class="contact-links"><a class="btn btn-primary" href="https://github.com/MinecadeXD" target="_blank" rel="noopener">Visit GitHub ↗</a></div></div></div></section>
 </main>
 <footer><div class="container footer-inner"><span>© <span id="year"></span> Minecade</span><span>Built with HTML, CSS & JavaScript</span></div></footer>
