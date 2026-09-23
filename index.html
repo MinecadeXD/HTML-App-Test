@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Pages Test</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #0d0d14;
+      color: white;
+      padding: 20px;
+    }
+    .app {
+      width: 100%;
+      max-width: 420px;
+      padding: 30px;
+      border-radius: 24px;
+      background: #171722;
+      border: 1px solid #2b2b3a;
+      text-align: center;
+    }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    .subtitle { color: #9999aa; margin-bottom: 28px; }
+    .status {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background: #182c1d;
+      color: #65d879;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+    .counter { font-size: 56px; font-weight: bold; margin: 15px 0 25px; }
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      background: #7c5cff;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:active { transform: scale(0.98); }
+    .clock { margin-top: 25px; color: #aaaabc; font-size: 14px; }
+    .footer { margin-top: 20px; color: #666678; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h1>GitHub Pages Test</h1>
+    <p class="subtitle">My first website hosted online</p>
+    <div class="status">● Website is working</div>
+    <div class="counter" id="counter">0</div>
+    <button onclick="increaseCounter()">Click Me</button>
+    <div class="clock" id="clock">Loading time...</div>
+    <div class="footer">Hosted with GitHub Pages</div>
+  </div>
+
+  <script>
+    let count = 0;
+
+    function increaseCounter() {
+      count++;
+      document.getElementById("counter").textContent = count;
+    }
+
+    function updateClock() {
+      document.getElementById("clock").textContent =
+        new Date().toLocaleString();
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
