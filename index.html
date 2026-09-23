@@ -1,84 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Pages Test</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-      background: #0d0d14;
-      color: white;
-      padding: 20px;
-    }
-    .app {
-      width: 100%;
-      max-width: 420px;
-      padding: 30px;
-      border-radius: 24px;
-      background: #171722;
-      border: 1px solid #2b2b3a;
-      text-align: center;
-    }
-    h1 { font-size: 28px; margin-bottom: 8px; }
-    .subtitle { color: #9999aa; margin-bottom: 28px; }
-    .status {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 20px;
-      background: #182c1d;
-      color: #65d879;
-      font-size: 14px;
-      margin-bottom: 25px;
-    }
-    .counter { font-size: 56px; font-weight: bold; margin: 15px 0 25px; }
-    button {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 14px;
-      background: #7c5cff;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:active { transform: scale(0.98); }
-    .clock { margin-top: 25px; color: #aaaabc; font-size: 14px; }
-    .footer { margin-top: 20px; color: #666678; font-size: 12px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Minecade — developer, app builder and UI designer.">
+<title>Minecade — Developer Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#09090f;color:#f5f5fa;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.container{width:min(1080px,calc(100% - 36px));margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(9,9,15,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:800;font-size:20px;letter-spacing:-.5px}.logo span{color:#9b7cff}
+.nav-links{display:flex;gap:28px;color:#aaaabb;font-size:14px}.nav-links a:hover{color:#fff}
+.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;position:relative}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(124,92,255,.13);filter:blur(90px);top:10%;left:50%;transform:translateX(-50%);pointer-events:none}
+.hero-content{position:relative;max-width:820px}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(155,124,255,.28);background:rgba(155,124,255,.08);color:#bbaaff;padding:7px 12px;border-radius:999px;font-size:13px;margin-bottom:24px}
+.dot{width:7px;height:7px;border-radius:50%;background:#75e08b;box-shadow:0 0 12px #75e08b}h1{font-size:clamp(52px,9vw,92px);line-height:.98;letter-spacing:-4px;margin-bottom:22px}
+.gradient{background:linear-gradient(100deg,#fff,#bbaaff 55%,#8e75ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:clamp(17px,2.5vw,21px);color:#a8a8b9;max-width:680px;margin-bottom:32px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid #2a2a39;font-weight:700;font-size:14px;transition:.2s}.btn-primary{background:#8a6cff;border-color:#8a6cff;color:#fff}.btn-secondary{background:#14141d;color:#ddd}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+section{padding:95px 0}.section-label{color:#9b7cff;font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}h2{font-size:clamp(30px,5vw,44px);letter-spacing:-1.5px;margin-bottom:12px}.section-intro{color:#9292a4;max-width:620px;margin-bottom:36px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:#111119;border:1px solid #242431;border-radius:20px;padding:25px;transition:.25s}.card:hover{border-color:#49415f;transform:translateY(-3px)}
+.project-top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:24px}.project-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#1c1929;border:1px solid #302946;font-weight:900;color:#bbaaff}.project-links{color:#8f8fa1;font-size:13px}.project-links:hover{color:#fff}
+.card h3{font-size:23px;margin-bottom:8px}.card p{color:#9292a4;font-size:14px;min-height:70px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}.tag{font-size:11px;color:#bdbdcc;background:#191923;border:1px solid #292936;padding:5px 9px;border-radius:999px}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:start}.about-text p{color:#9999aa;margin-bottom:17px}.info-card{background:#111119;border:1px solid #242431;border-radius:20px;padding:24px}.info-row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid #22222d;font-size:14px}.info-row:last-child{border-bottom:0}.info-row span:first-child{color:#777789}.info-row span:last-child{color:#ddd}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:10px 14px;border-radius:11px;background:#111119;border:1px solid #292936;color:#d5d5df;font-size:13px}
+.contact{background:#111119;border:1px solid #292936;border-radius:24px;padding:45px;text-align:center}.contact p{color:#9696a8;max-width:570px;margin:0 auto 25px}.contact-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+footer{border-top:1px solid #1c1c26;padding:25px 0;color:#676777;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px}
+@media(max-width:720px){.nav-links{display:none}.container{width:min(100% - 28px,1080px)}h1{letter-spacing:-2.5px}section{padding:72px 0}.projects,.about-grid{grid-template-columns:1fr}.card p{min-height:auto}.contact{padding:30px 20px}.footer-inner{flex-direction:column}}
+</style>
 </head>
 <body>
-  <div class="app">
-    <h1>GitHub Pages Test</h1>
-    <p class="subtitle">My first website hosted online</p>
-    <div class="status">● Website is working</div>
-    <div class="counter" id="counter">0</div>
-    <button onclick="increaseCounter()">Click Me</button>
-    <div class="clock" id="clock">Loading time...</div>
-    <div class="footer">Hosted with GitHub Pages</div>
-  </div>
-
-  <script>
-    let count = 0;
-
-    function increaseCounter() {
-      count++;
-      document.getElementById("counter").textContent = count;
-    }
-
-    function updateClock() {
-      document.getElementById("clock").textContent =
-        new Date().toLocaleString();
-    }
-
-    updateClock();
-    setInterval(updateClock, 1000);
-  </script>
+<nav><div class="container nav-inner"><a class="logo" href="#home">Mine<span>cade</span></a><div class="nav-links"><a href="#projects">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+<main>
+<section class="hero" id="home"><div class="glow"></div><div class="container hero-content"><div class="eyebrow"><span class="dot"></span> Building & learning</div><h1>Hi, I'm <span class="gradient">Minecade.</span></h1><p>I build useful apps, experiment with web and Android development, and turn ideas into working projects.</p><div class="actions"><a class="btn btn-primary" href="#projects">View Projects ↓</a><a class="btn btn-secondary" href="https://github.com/MinecadeXD" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
+<section id="projects"><div class="container"><div class="section-label">What I've built</div><h2>Projects</h2><p class="section-intro">A selection of projects I'm building and experimenting with. More coming soon.</p><div class="projects">
+<article class="card"><div class="project-top"><div class="project-icon">A</div><a class="project-links" href="https://github.com/MinecadeXD/AniDiary" target="_blank" rel="noopener">GitHub ↗</a></div><h3>AniDiary</h3><p>An offline anime journey tracker for managing watch progress, seasons, movies and timeline history.</p><div class="tags"><span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">Android</span><span class="tag">Capacitor</span></div></article>
+<article class="card"><div class="project-top"><div class="project-icon">P</div><a class="project-links" href="https://github.com/MinecadeXD/PDFGo" target="_blank" rel="noopener">GitHub ↗</a></div><h3>PDFGo</h3><p>A lightweight PDF reader focused on a clean reading experience, page controls and useful settings.</p><div class="tags"><span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">Android</span></div></article>
+</div></div></section>
+<section id="about"><div class="container"><div class="section-label">A little about me</div><h2>Building by creating.</h2><div class="about-grid"><div class="about-text"><p>I'm Minecade, a developer and creator from India who enjoys turning ideas into practical projects.</p><p>I like experimenting with web technologies, Android apps, UI design, and tools that solve problems I actually have.</p><p>I'm still learning, so this portfolio is also a record of the things I'm building along the way.</p></div><div class="info-card"><div class="info-row"><span>Focus</span><span>Apps & Web</span></div><div class="info-row"><span>Based in</span><span>India</span></div><div class="info-row"><span>GitHub</span><span>@MinecadeXD</span></div><div class="info-row"><span>Currently</span><span>Building</span></div></div></div></div></section>
+<section id="skills"><div class="container"><div class="section-label">Tools I use</div><h2>Skills & technologies</h2><p class="section-intro">Technologies I'm working with while building my projects.</p><div class="skills"><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">Git & GitHub</span><span class="skill">Android</span><span class="skill">Capacitor</span><span class="skill">Termux</span><span class="skill">UI Design</span></div></div></section>
+<section id="contact"><div class="container"><div class="contact"><div class="section-label">Let's connect</div><h2>Have an idea?</h2><p>Check out my GitHub to see what I'm building, or come back later to see what I've made next.</p><div class="contact-links"><a class="btn btn-primary" href="https://github.com/MinecadeXD" target="_blank" rel="noopener">Visit GitHub ↗</a></div></div></div></section>
+</main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Minecade</span><span>Built with HTML, CSS & JavaScript</span></div></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
 </html>
